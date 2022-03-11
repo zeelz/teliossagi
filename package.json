@@ -1,0 +1,10 @@
+{
+  "name": "teliossagi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "php -S 127.0.0.1:5550"
+  }
+
+}

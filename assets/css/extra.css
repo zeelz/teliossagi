@@ -1,0 +1,49 @@
+.pricing .box {
+  background-image: url("../../images/cover.jpg");
+  height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.05),
+    0 0.5rem 1.2rem rgba(0, 0, 0, 0.1) !important;
+  border: unset;
+}
+
+.pricing .box:nth-child(3) {
+  border: 5px red;
+}
+.pricing .box h2 {
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.pricing .box .btn-buy {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: #ff9800;
+  /* box-shadow: 0px 0px 0px 6px #ffffff47; */
+}
+
+.pricing .box .btn-buy:hover {
+  background: #ff9800;
+  color: #000;
+}
+
+.cta {
+  padding: 6rem 0;
+}
+
+.modal-content {
+  background-color: #2196f3;
+}
+
+.modal-header {
+  border-bottom: 1px solid #58acff;
+  background: #2196f3;
+  box-shadow: 0px 1px 6px #004a7d;
+}
