@@ -40,7 +40,9 @@ if ($request) {
           */
 
         $ebook = $result['data']['metadata']['ebookNo'];
-        sendEmail($ebook);
+        $email = $result['data']['customer']['email'];
+
+        sendEmail($ebook, $email);
       } else {
         // the transaction was not successful, do not deliver value'
         // print_r($result);  //uncomment this line to inspect the result, to check why it failed.
