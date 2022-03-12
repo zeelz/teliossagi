@@ -123,15 +123,20 @@
           // function 
 
           $ebooks = [
-            ["name" => "Apps and Tools used for Yahoo", "price" => 490, "fn" => "Apps-and-Tools-used-for-Yahoo"],
-            ["name" => "Blackmail Format", "price" => 120, "fn" => "Blackmail-Format"],
-            ["name" => "CRAIGLIST SCAM", "price" => 750, "fn" => "CRAIGLIST-SCAM"],
+            ["name" => "Apps and Tools used for Yahoo", "price" => 490],
+            ["name" => "Blackmail Format", "price" => 120],
+            ["name" => "CRAIGLIST SCAM", "price" => 750],
+            ["name" => "DATING FORMAT", "price" => 655],
+            ["name" => "Grant and Consignment", "price" => 324],
+            ["name" => "HOW TO SPOT A FAKE INESTMENT", "price" => 611]
+
+            // ["name" => "", "price" => ]
+            // ["name" => "", "price" => ]
 
             // "Carding",
-            // "CRAIGLIST SCAM",
-            // "DATING FORMAT",
-            // "Grant and Consignment",
-            // "HOW TO SPOT A FAKE INESTMENT",
+            // "",
+            // "",
+            // "",
             // "HOW TO SPOT REPLICAS AND COUNTERFEIT ITEMS ONLINE",
             // "Inheritance format",
             // "Medical Billing Format",
@@ -156,7 +161,7 @@
                   <form method="POST" action="pay.php">
                     <input type="hidden" name="price" value="<?= $ebook['price'] ?>">
                     <input type="hidden" name="email" class="email">
-                    <input type="hidden" name="ebookNo" value="<?= $ebook['fn'] ?>">
+                    <input type="hidden" name="ebookNo" value="<?= $ebook['name'] ?>">
                   </form>
                   <button type="submit" class="btn-buy" data-bs-toggle="modal" data-ebook-price="<?= $ebook['price']; ?>" data-bs-target="#buyModal">Buy eBook</button>
 

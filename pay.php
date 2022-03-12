@@ -2,14 +2,13 @@
 
 $price  = $_POST['price'];
 $email  = $_POST['email'];
-$ebookNo = $_POST['ebookNo'];
+$ebookNo = implode("-", preg_split("/ /", $_POST['ebookNo'], 0, PREG_SPLIT_NO_EMPTY)); // hypenates the name
 
 $url = "https://api.paystack.co/transaction/initialize";
 $fields = [
   'email' => $email,
   'amount' => $price . '00',
   'metadata' => ['ebookNo' => $ebookNo]
-
 ];
 $fields_string = http_build_query($fields);
 //open connection
