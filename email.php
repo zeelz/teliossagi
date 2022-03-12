@@ -14,4 +14,6 @@ $content .= "<div><p style='text-align: center;'>234 (0) 809 453 9393 <br> Lagos
 $content .= "</td></tr></table>";
 
 echo $content;
+
+header("Location: /?foo=bar&city=lagos");
 ?>

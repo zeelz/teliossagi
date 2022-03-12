@@ -26,9 +26,10 @@
     $retval = mail($to, $subject, $content, $header);
 
     if ($retval == true) {
-      echo "Message sent successfully..";
+
+      header("Location: /teliossagi?customer=" . $email . "&reference=" . $_GET['reference']);
     } else {
-      echo "Message could not be sent...";
+      header("Location: /teliossagi?error=yes");
     }
   }
 

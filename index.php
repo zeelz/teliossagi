@@ -42,7 +42,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Teliossagi</a></h1>
+      <h1 class="logo"><a href="/">Teliossagi</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -72,6 +72,39 @@
     <section id="pricing" class="pricing">
       <div class="container">
 
+        <?php
+
+
+        if (isset($_GET['customer']) && $_GET['customer'] != "" && isset($_GET['reference']) && $_GET['reference'] != "") : ?>
+
+          <div class="col-md-6 offset-md-3">
+            <div class="alert alert-success alert-dismissible fade show " role="alert">
+              <strong>Your eBook has been sent to your email address [<?= $_GET['customer'] ?>]</strong>
+              <p class="small mb-0">Please, send a mail to <strong>books@teliossagi.com</strong> if you didn't receive the download link in your inbox.</p>
+
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </div>
+
+        <?php endif;
+
+
+
+        if (isset($_GET['error']) && $_GET['error'] == "yes") : ?>
+
+          <div class="col-md-6 offset-md-3">
+            <div class="alert alert-danger alert-dismissible fade show " role="alert">
+              <strong>There was an error sending your eBook</strong>
+              <p class="small mb-0">Please, send a mail to <strong>books@teliossagi.com</strong> and we would send it as soon as possible.</p>
+
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </div>
+
+        <?php endif ?>
+
+
+
         <div class="section-title">
           <h2>Gain knowledge</h2>
           <h3>Available <span>eBooks</span></h3>
@@ -92,6 +125,7 @@
           $ebooks = [
             ["name" => "Apps and Tools used for Yahoo", "price" => 490, "fn" => "Apps-and-Tools-used-for-Yahoo"],
             ["name" => "Blackmail Format", "price" => 120, "fn" => "Blackmail-Format"],
+            ["name" => "CRAIGLIST SCAM", "price" => 750, "fn" => "CRAIGLIST-SCAM"],
 
             // "Carding",
             // "CRAIGLIST SCAM",
@@ -111,8 +145,14 @@
 
             <div class="col-lg-4 col-md-6">
               <div class="box" style="padding: 0;">
-                <h2 data-ebook-cover="<?= $ebook['name'];  ?>"><?= $ebook['name'];  ?></h2>
-                <div class="btn-wrap">
+
+
+                <div class="amount fs-4 pe-2 text-end text-white">
+                  <div class="border-bottom d-inline p-2"><sup style="font-size: 0.9rem;">&#8358;</sup><?= $ebook['price'] ?></div>
+                </div>
+
+                <h2 class="mt-auto" data-ebook-cover="<?= $ebook['name'];  ?>"><?= $ebook['name'];  ?></h2>
+                <div class="btn-wrap mt-auto">
                   <form method="POST" action="pay.php">
                     <input type="hidden" name="price" value="<?= $ebook['price'] ?>">
                     <input type="hidden" name="email" class="email">
@@ -294,10 +334,17 @@
     proceedToPay.addEventListener('click', e => {
       e.preventDefault()
       // const price = e.target.parentElement.querySelector('input').value
+
       const email = e.target.parentElement.previousElementSibling.querySelector('input.email').value
-      const emailInput = paymentForm.querySelector('input.email')
-      emailInput.value = email
-      paymentForm.submit()
+
+
+
+      if (email !== "" && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+        const emailInput = paymentForm.querySelector('input.email')
+        emailInput.value = email
+        paymentForm.submit()
+      }
+
     })
   </script>
 

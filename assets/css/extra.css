@@ -10,6 +10,7 @@
   box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.05),
     0 0.5rem 1.2rem rgba(0, 0, 0, 0.1) !important;
   border: unset;
+  position: relative;
 }
 
 .pricing .box:nth-child(3) {
@@ -34,6 +35,15 @@
   color: #000;
 }
 
+.pricing .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
 .cta {
   padding: 6rem 0;
 }
@@ -46,4 +56,14 @@
   border-bottom: 1px solid #58acff;
   background: #2196f3;
   box-shadow: 0px 1px 6px #004a7d;
+}
+
+.box .amount div {
+  background-color: #ff9800;
+}
+
+.pricing .box .amount,
+.pricing .box h2,
+.pricing .box .btn-wrap {
+  z-index: 1;
 }
