@@ -128,7 +128,7 @@
             ["name" => "CRAIGLIST SCAM", "price" => 750],
             ["name" => "DATING FORMAT", "price" => 655],
             ["name" => "Grant and Consignment", "price" => 324],
-            ["name" => "HOW TO SPOT A FAKE INESTMENT", "price" => 611]
+            ["name" => "HOW TO SPOT A FAKE INVESTMENT", "price" => 611]
 
             // ["name" => "", "price" => ]
             // ["name" => "", "price" => ]
