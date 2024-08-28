@@ -123,27 +123,20 @@
           // function 
 
           $ebooks = [
-            ["name" => "Apps and Tools used for Yahoo", "price" => 490],
-            ["name" => "Blackmail Format", "price" => 120],
-            ["name" => "CRAIGLIST SCAM", "price" => 750],
-            ["name" => "DATING FORMAT", "price" => 655],
-            ["name" => "Grant and Consignment", "price" => 324],
-            ["name" => "HOW TO SPOT A FAKE INVESTMENT", "price" => 611]
-
-            // ["name" => "", "price" => ]
-            // ["name" => "", "price" => ]
-
-            // "Carding",
-            // "",
-            // "",
-            // "",
-            // "HOW TO SPOT REPLICAS AND COUNTERFEIT ITEMS ONLINE",
-            // "Inheritance format",
-            // "Medical Billing Format",
-            // "Military Format",
-            // "Oil Rig Format",
-            // "PTS [Main]",
-            // "WIRE-WIRE"
+            ["name" => "Apps and Tools used for Yahoo", "price" => 4961],
+            ["name" => "Blackmail Format", "price" => 1260],
+            ["name" => "CRAIGLIST SCAM", "price" => 7560],
+            ["name" => "DATING FORMAT", "price" => 6565],
+            ["name" => "Grant and Consignment", "price" => 3264],
+            ["name" => "HOW TO SPOT A FAKE INVESTMENT", "price" => 6161],
+            ["name" => "HOW TO SPOT REPLICAS AND COUNTERFEIT ITEMS ONLINE", "price" => 4362],
+            ["name" => "Inheritance format", "price" => 8362],
+            ["name" => "Medical Billing Format", "price" => 6662],
+            ["name" => "Military Format", "price" => 4463],
+            ["name" => "Oil Rig Format", "price" => 3262],
+            ["name" => "CARDING", "price" => 3264],
+            ["name" => "WIRE-WIRE", "price" => 4463],
+            ["name" => "PTS", "price" => 5534]
           ];
 
           foreach ($ebooks as $ebook) : ?>
