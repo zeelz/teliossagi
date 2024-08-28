@@ -49,13 +49,13 @@
 }
 
 .modal-content {
-  background-color: #2196f3;
+  background-color: #ce183a;
 }
 
 .modal-header {
-  border-bottom: 1px solid #58acff;
-  background: #2196f3;
-  box-shadow: 0px 1px 6px #004a7d;
+  border-bottom: 1px solid #ef1941;
+  box-shadow: 0px 1px 6px #8d1027;
+  background: #ce183a;
 }
 
 .box .amount div {
@@ -66,4 +66,9 @@
 .pricing .box h2,
 .pricing .box .btn-wrap {
   z-index: 1;
+}
+
+.form-control:focus {
+  border-color: #900b23;
+  box-shadow: 0 0 0 0.25rem rgb(178 9 41 / 56%);
 }
